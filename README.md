@@ -48,7 +48,7 @@ Unsurprisingly, there is a lot of previous information on Spotify due to the amo
     * audio_valence: measure from 0.01-1.0 describing musical positiveness conveyed by a track - tracks with high valence sound more positive while tracks with low valence sound more negative
 * Target Variable: popularity rating (Popular, Moderately, Unpopular)
 
-### 2.3. Data Analysis
+### Data Analysis
 * Our project is tackles a multi-class classification problem. The first step we will take is cleaning the data and classifying them into three groups - not popular, somewhat popular, and very popular based on the song_popularity numeric feature. We will also look at the various correlations between the features to determine any patterns and relationships. In addition, we will use iterative feature engineering to determine the importance of features. We will also use min/max and standard scalar to normalize the features.
 
 * Our target variable is popularity and we have separated popularity out into three classes making it a categorical variable. We are planning to use KNN, SVM, Naive Bayes, and Decision Tree Classifiers along with GridSearch. We are not sure which algorithms will perform the best, so we plan to give them all a try and compare the accuracies.

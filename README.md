@@ -1,5 +1,6 @@
-# Spotify-Analysis
+# SPOTIFY ANALYSIS
 
+# Introduction
 #### Executive Summary:
 
 Spotify is the Swedish music streaming service that has become one of the most popular platforms in the world- especially for college students. As a group, we have always been interested in how songs become popular, and specifically how they get classified into popular/recommended playlists. Are there trends or is it completely random? Our goal for this project is to determine if relationships exist between variables such as danceability, audio valence, etc. from Spotify's data and observe their correlation with popularity. Using this information, we aim to create a predictability model for Spotify songs. 
@@ -48,6 +49,7 @@ Unsurprisingly, there is a lot of previous information on Spotify due to the amo
     * audio_valence: measure from 0.01-1.0 describing musical positiveness conveyed by a track - tracks with high valence sound more positive while tracks with low valence sound more negative
 * Target Variable: popularity rating (Popular, Moderately, Unpopular)
 
+# Methods
 ### Data Analysis
 * Our project is tackles a multi-class classification problem. The first step we will take is cleaning the data and classifying them into three groups - not popular, somewhat popular, and very popular based on the song_popularity numeric feature. We will also look at the various correlations between the features to determine any patterns and relationships. In addition, we will use iterative feature engineering to determine the importance of features. We will also use min/max and standard scalar to normalize the features.
 
@@ -86,7 +88,7 @@ Based on research on predictability models, we incorporated the following classi
      * Null: Scaling the features with Standard Scaler will result in the same increase in performance for the Support Vector Machine Classifier and the K-Nearest Neighbor Classifier
      * Alternative: Scaling the features with Standard Scaler will not result in the same increase (> 1% difference) in performance for the Support Vector Machine Classifier and the K-Nearest Neighbor Classifier
        
-
+# Results
 **Model Evaluation:**
 
 * **k-Nearest Neighbors Classifier:**
@@ -139,7 +141,7 @@ Based on research on predictability models, we incorporated the following classi
 * **Decision Tree Classifier:**
     * The training and testing accuracies are indicative of massive overfitting of the training data. Since, there was a very significant difference between the two values, this algorithm has a lot of potential for improvement. We can tune the following parameters: criterion, splitter, max_feaures, and minimum samples to split in order to improve both the precision and accuracy of the algorithm. We accomplished the task of underfitting the model through the use of Grid Search.
 
-
+# Conlcusion
 ### Summary of Analysis
 
 In order to analyze our data, we began by splitting our data into the feature and target variables. We scaled our data uning Standard and Minmax Scaler in order to compare the accuracies of the preliminary models with the data. We tested the four main classification algorithms: k-Nearest Neighbor Classifer, Decision Tree Classifier, Support Vector Machine, and Gaussain Naive Bayes. The accuracy of the test and training sets indicated that the k-Nearest Neighbor Classifer and the Decision Tree Classifier were thoroughly overfitting the training data. We proceeded to tune these algorthms in order to loosen the fit on the training data. Through the use of Grid Search, we observed that the accuracy of the testing set data improved significantly on the test data set for the k-Nearest Neighbor. This resulted in a a very similar performance for the k-Nearest Neighbor Classifier and Decision Tree Classifier at around a 60% accuracy on the test data set. This analysis resulted in prediction accuracies that were averagely successful.
@@ -203,7 +205,7 @@ Going back to our original project topic, we wanted to determine whether there w
 However, when conducting our model, we actually found that when using six feature variables, there was a fairly high accuracy of 60% using the k-Nearest Neighbor algorithm. 
 
 
-### Conclusion
+### Closing Statement
 
 One way to have more accurate results would be to increase the number of feature variables. We only used feature variables that were given to us by Spotify, but if we added more variables such as social media response time to songs or number of tweets about a specific song, we may have found a higher accuracy for our predictive model.
 
